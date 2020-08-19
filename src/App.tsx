@@ -1,23 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button from './components/Button/button'
+import Menu from './components/Menu/menu'
+import MenuItem from './components/Menu/menuItem'
+import SubMenu from './components/Menu/subMenu'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Hello Word</h1>
+        <Menu defaultIndex={'0'} mode="horizontal" defaultOpenSubMenus={['4']}>
+          <MenuItem index={'1'}>
+            cool link 0
+          </MenuItem>
+          <MenuItem index={'2'}>
+            cool link 1
+          </MenuItem>
+          <MenuItem disabled>
+            cool link 2
+          </MenuItem>
+          <SubMenu title="opened">
+            <MenuItem>
+              drop1
+            </MenuItem>
+            <MenuItem>
+              drop2
+            </MenuItem>
+          </SubMenu>
+        </Menu>
+        <div>
+          <Button size = "sm">ButtonSize.Small</Button>
+          <Button disabled>button</Button>
+          <Button size = "lg">ButtonSize.Large</Button>
+        </div>
+        <div>
+          <Button btnType="default">ButtonType.Default</Button>
+          <Button btnType="primary">ButtonType.Primary</Button>
+          <Button btnType="danger">ButtonType.Danger</Button>
+          <Button btnType="link" href="#">ButtonType.Link</Button>
+        </div>
       </header>
     </div>
   );
