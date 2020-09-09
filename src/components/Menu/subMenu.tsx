@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react'
 import classNames from 'classnames'
+import Icon from '../Icon/icon'
+import { Transition } from 'react-transition-group'
 import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
 
@@ -64,6 +66,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className }) 
     <li key={index} className={classes} {...hoverEvents}>
       <div className="submenu-title" {...clickEvents}>
         {title}
+        <Icon icon="angle-down" className="arrow-icon"/>
       </div>
       {renderChildren()}
     </li>

@@ -3,13 +3,18 @@ import Button from './components/Button/button'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
+import Icon from './components/Icon/icon'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Hello Word</h1>
-        <Menu defaultIndex={'0'} mode="horizontal" defaultOpenSubMenus={['4']}>
+        <Icon icon="coffee" theme="primary" size="10x" />
+        <Menu defaultIndex={'0'} mode="vertical" defaultOpenSubMenus={['4']}>
           <MenuItem index={'1'}>
             cool link 0
           </MenuItem>
