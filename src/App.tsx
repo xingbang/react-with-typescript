@@ -14,7 +14,7 @@ function App() {
       <header className="App-header">
         <h1>Hello Word</h1>
         <Icon icon="coffee" theme="primary" size="10x" />
-        <Menu defaultIndex={'0'} mode="vertical" defaultOpenSubMenus={['4']}>
+        <Menu defaultIndex={'0'} mode="horizontal" defaultOpenSubMenus={['4']}>
           <MenuItem index={'1'}>
             cool link 0
           </MenuItem>
