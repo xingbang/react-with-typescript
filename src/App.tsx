@@ -3,6 +3,7 @@ import Button from './components/Button/button'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
+import Input from './components/Input/input'
 import Icon from './components/Icon/icon'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Hello Word</h1>
+        <Input size="sm"  placeholder="请输入正确的名称" value="" icon="coffee"/>
         <Icon icon="coffee" theme="primary" size="10x" />
         <Menu defaultIndex={'0'} mode="horizontal" defaultOpenSubMenus={['4']}>
           <MenuItem index={'1'}>
@@ -45,6 +47,7 @@ function App() {
           <Button btnType="link" href="#">ButtonType.Link</Button>
         </div>
       </header>
+      {process.env.REACT_APP_xingbang}
     </div>
   );
 }

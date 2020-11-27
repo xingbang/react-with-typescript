@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     href,
     ...restProps
   } = props
-
+  console.log(process.env.REACT_APP_xingbang)
   const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
